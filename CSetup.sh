@@ -1,3 +1,5 @@
 #! /bin/bash
-echo "Not finished yet";
+mkdir src tests compiled
+touch src/main.c README.md
+cp "$PROGRAM/Snekkie-Template/LICENSE" "LICENSE"
 return
