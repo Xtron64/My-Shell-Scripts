@@ -1,5 +1,3 @@
 #! /bin/bash
-CSetup() {
-	echo "Not finished yet";
-	return
-}
+echo "Not finished yet";
+return
