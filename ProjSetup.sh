@@ -1,20 +1,20 @@
 #! /bin/bash
 ProjSetup(){
-	read -p "What is the name of your project: " project
-	pyproject = $project
-	pyproject += "_py"
-	ktproject = $project
-	ktproject += "_kt"
-	rsproject = $project
-	rsproject += "_rs"
-	mdkir $pyproject $ktproject $rsproject
-	cd $pyproject
-	source ~/Scripts/PySetup.sh
+	read -pr "What is the name of your project: " project
+	pyproject=$project
+	pyproject+="_py"
+	cproject=$project
+	cproject+="_c"
+	rsproject=$project
+	rsproject+="_rs"
+	mdkir "$pyproject $cproject $rsproject"
+	cd "$pyproject" || return
+	PySetup
 	cd ..
-	cd $ktproject
-	source ~/Scripts/KTSetup.
+	cd "$cproject" || return
+	CSetup
 	cd ..
-	cd $rsproject
+	cd "$rsproject" || return
 	cargo init
 	cd ..
 	cp ~/Programming/Snekkie-Template/LICENSE LICENSE
