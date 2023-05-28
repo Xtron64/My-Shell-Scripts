@@ -1,6 +1,6 @@
-def navigate [directory?: str] {
-	if ($directory) {
-		cd $directory
-		}
-	cd $(fd -t d | fzf)
+def navigate [directory?: path] {
+    if  not $directory == "" {
+        cd $directory
+    }
+    cd $"(fd -t d | fzf)"
 }
