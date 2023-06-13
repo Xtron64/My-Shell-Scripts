@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#!/bin/bash
 # Get info from the user to put into setup.py
 read -pr "Please enter your project's name: " proj_name;
 read -pr "What version is your project on: " proj_ver;

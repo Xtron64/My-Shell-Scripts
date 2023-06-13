@@ -1,9 +1,10 @@
-#! /bin/bash
-navigate() {
-    if [ -n "$1" ]; then
-        cd "$1" || return
-    fi
+#!/bin/bash
 
-    selected_directory=$(find . -type d | fzf)
-    cd "$selected_directory" || return
-}
+directory="$1"
+
+if [ -n "$directory" ]; then
+  cd "$directory" || exit 1
+fi
+
+selected_dir=$(fd -t d | fzf)
+cd "$selected_dir" || exit 1

@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 read -pr "What is the name of your project: " project
 pyproject=$project
 pyproject+="_py"
